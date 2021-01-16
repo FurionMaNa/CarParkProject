@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class CarClass {
+public class CarClass {
 
     protected WheelsClass wheels = new WheelsClass();
     protected OwnerClass owner = new OwnerClass();

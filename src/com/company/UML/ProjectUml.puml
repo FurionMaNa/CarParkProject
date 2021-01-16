@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class OwnerClass {
+    private String surname;
+    private String name;
+    private String patronymic;
+    private Integer age;
+}
+
+class EngineClass {
+    private double volume;
+    private Integer horsepower;
+}
+
+class WheelsClass {
+    private Double diameter;
+    private Double hardness;
+}
+
+class CarClass {
+    protected WheelsClass wheels;
+    protected OwnerClass owner;
+    protected EngineClass engine;
+}
+
+class TruckClass extends CarClass{
+    private final Double liftingСapacity;
+}
+
+class PassengerCarClass extends CarClass{
+    private Integer countPassengers;
+}
+
+class QueueClass {
+    public static Queue<CarClass> queueCar;
+    public static Integer passCount;
+    public static Double mass;
+}
+
+CarClass o-- OwnerClass
+CarClass o-- EngineClass
+CarClass o-- WheelsClass
+QueueClass o-- CarClass
+@enduml
